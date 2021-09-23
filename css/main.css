@@ -1,0 +1,716 @@
+  @font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html * {
+    /* border: 1px solid bisque; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Nexon Lv1 Gothic OTF';
+    position: relative;
+    box-sizing: border-box;
+  }
+  html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* 기본 10px로 맞춘 것 */
+    font-size: 62.5%;
+    background-color: #f8f2e8;
+  }
+  .wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .page{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  #landing{
+    width: 100%;
+    height: 99vh;
+  }
+
+  #header{
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 0, 0);
+    padding: 5px 0;
+    z-index: 250;
+    transform: translateY(-50%);
+  }
+  #header:hover{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .6s;
+    cursor: pointer;
+  }
+  nav>ul>li{
+    position: relative;
+  }
+  nav>ul>li:after{
+    content: "";
+    left: 0;
+    bottom: 4px;
+    height: 10px;
+    margin: 5px 0 0;
+    transition: all .5s;
+    transition-duration: .3s;
+    opacity: 0;
+    background-color: #ffb000;
+    width: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  nav>ul>li:hover:after{
+    width: 100%;
+    opacity: 1;
+  }
+  ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    font-size: small;
+  }
+  li>a{
+    color: #000;
+    text-decoration: none;
+    padding:0 5px;
+    font-size: 1.5rem;
+  }
+  li>span{
+    background-color: #000;
+  }
+  .menu *{
+    font-weight: 600;
+  }
+  #key_val{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+  }
+
+  #key_val svg text,#startBtn{
+    width: auto;
+  }
+  #startBtn button{
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    color: #4472CA;
+    width: 15vw;
+    height: 6vh;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease-out;
+    transform-style: preserve-3d;
+    background-color:#FFE66D;
+    border: 3px solid #ffb000;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  #startBtn button::after{
+    content: "Let's Go 😎";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+    opacity: 0;
+    background-color: #FFb000;
+    padding-top: 1vh;
+    transition: all 0.5s ease-out 0s;
+    border-radius: 10px;
+    border: 3px solid #ffb000;  
+    cursor: pointer;
+  }
+  #startBtn button:hover:after{
+    opacity: 1;
+  }
+  .particles{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 150;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  }
+
+  @keyframes move{
+    0%{
+      transform: translateY(0);
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(45vw);
+      opacity: 0;
+    }
+  }
+
+  svg text:not(:last-of-type){
+    font-family: 'CWDangamAsac-Bold', cursive;
+    font-size: 9rem;
+    font-weight: 700;
+    stroke-dasharray: 415px;
+    fill: transparent;
+    animation: stroke .7s linear;
+    animation-fill-mode: forwards;
+    position: absolute;
+  }
+  svg text:nth-child(1){
+    animation-delay: 0s;
+  }
+  svg text:nth-child(2){
+    animation-delay: 0.5s;
+  }
+  svg text:nth-child(3){
+    animation-delay: 1s;
+  }
+  svg text:nth-child(4){
+    animation-delay: 1.5s;
+  }
+  svg text:nth-child(5){
+    animation-delay: 2s;
+  }
+  svg text:nth-child(6){
+    animation-delay: 2.5s;
+  }
+  svg text:nth-child(7){
+    animation-delay: 3s;
+  }
+  svg text:nth-child(8){
+    animation-delay: 3.5s;
+  }
+  svg text:nth-child(9){
+    animation-delay: 4s;
+  }
+  svg text:nth-child(10){
+    animation-delay: 4.5s;
+  }
+
+  @keyframes stroke{
+    0%{
+      stroke: #FF6B6B;
+      stroke-width: 2px;
+      stroke-dashoffset: 415px;
+    }
+    70%{
+      fill: transparent;
+    }
+    98%{
+      stroke: #FF6B6B;
+      stroke-width: 2px;
+    }
+    100%{
+      fill: #FFE66D;
+      stroke: #FF6B6B;
+      stroke-width: 2px;
+      stroke-dashoffset: 0px;
+    }
+  }
+  /* 깜빡깜빡 */
+  svg text:last-of-type{
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    font-size: 2.5rem;
+    stroke: none;
+    fill: #FF6B6B;
+    animation: blink 2s forwards ease-in 4s;
+    animation-delay: 5.5s;
+    opacity: 0;
+  }
+
+  @keyframes blink{
+    1%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .page article *{
+    word-break: keep-all;
+    font-size: 3.5rem;
+  }
+  .page .bold{
+    font-weight: 700;
+  }
+  .about .intro{
+    transform: translateX(-450px);
+    width: 100%;
+    display: inline-block;
+    opacity: 0;
+    transition: all 1s;
+    text-align:left;
+    padding-top: 10vh;
+    padding-left: 8vw;
+  }
+  .about .intro.show{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .about .underline{
+    color: #000;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 50%);
+  }
+  .about .info{
+    padding-top: 10%;
+    padding-right: 8vw;
+    text-align: right;
+    transform: translateX(300px);
+    transition: all 1s;
+  }
+  .about .info.show{
+    transform: translateX(0);
+  }
+  #info span{
+    font-size: 2.5rem;
+  }
+  .about article p{
+      padding-left: 3px;
+  }
+  .about article a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .about article a img{
+    width: 15px;
+    height: 15px;
+  }
+  .icon{
+    display: inline-block;
+  }
+  .about #greeting{
+    animation: shake 2s infinite ease-in;
+  }
+
+  @keyframes shake{
+    50%{
+      transform: rotate(-30deg);
+    }
+  }
+  .about #write{
+    animation: write 2s infinite ease-in;
+  }
+  @keyframes write{
+    50%{
+      transform: translateX(10%);
+    }
+  }
+  #gotolink:hover{
+    animation: blink 1.5s infinite;
+  }
+
+  .like .likemain{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    top: 50vh;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: all 1s;
+  }
+  .like .likemain.show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .like #scroller{
+    display: flex;
+    flex-direction: column;
+    height: 4.5rem;
+    width: 17rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  #scroller ol{
+    position: relative;
+    width: 100%;
+    list-style: none;
+  }
+  #scroller li{
+    width: 100%;
+    font-weight: 700;
+    display: block;
+    font-size: 4rem;
+    color: #FF6B6B;
+  }
+  #likemain span{
+    margin-top: 4px;
+  }
+  .like #linkinfo{
+    top: 10vh;
+    text-align: center;
+    font-size: 2.5rem;
+    height: 2.5rem;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .like .underline:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #ffb000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    z-index: -1;
+  }
+  .like .underline:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .map{
+    text-align: center;
+    display: none;
+    top: 5vh;
+  }
+  
+  .myproject article .projectHeader{
+    top: 10vh;
+    left: 5vw;
+    transform: translateX(-350px);
+    transition: all 1s;
+  }
+  .myproject article .projectHeader.show{
+    transform: translateX(0);
+  }
+  .myproject .projectHeader span{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 50%);
+  }
+  .projects{
+    top: 15vh;
+    display: flex;
+    padding: 8px 18px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 7vw;
+    height: 68vh;
+    transform: translateY(200px);
+    transition: all 1s;
+    opacity: 0;
+  }
+  .projects.show{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .project img{
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .project .img{
+    max-height: 53%;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #ffd0ab;
+    border-radius: 10px;
+  }
+
+  .project{
+    margin: 0 auto;
+    width: 45vw;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project .title{
+    font-size: 2.3rem;
+    margin: 20px auto;
+    width: 15vw;
+  }
+  .project .info span{
+    font-size: 1.5rem;
+  }
+  .project .title:after{
+    content: "";
+    margin-top: 10px;
+    display: block;
+    height: 3px;
+    position: absolute;
+    background: #FFD0AE;
+    width: 100%;
+  }
+  .project .info{
+    width: 16vw;
+  }
+  .project .info span:nth-of-type(2){
+    font-size: 1.3rem;
+  }
+  .modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.377);
+    display: none;
+  }
+  .modal>img{
+    width: 25px;
+    height: 25px;
+    top: 12vh;
+    left: 80vw;
+    cursor: pointer;
+  }
+  .modal-wrap{
+    position: absolute;
+    background-color: #fff;
+    width: 60vw;
+    height: 60vh;
+    top: 20vh;
+    left: 20%;
+    padding: 8px 18px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    padding: 0 5vw;
+  }
+  .modal-wrap>img{
+    max-width: 300px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  .modal-wrap .info{
+    margin: 10px;
+  }
+  .modal-wrap .info h4{
+    font-size: 3rem;
+    margin-bottom: 3vh;
+    margin-top: 10vh;
+  }
+
+  .modal-wrap .info span{
+    font-size: 1.3rem;
+  }
+  .modal-wrap .info p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    word-break: keep-all;
+    margin-top: 2vh;
+  }
+  .roadmapHeader{
+    top: 10vh;
+    text-align: right;
+    padding-right: 5vw;
+    font-size: 3rem;
+    transform: translateX(350px);
+    transition: all 1s;
+  }
+  .roadmapHeader.show{
+    transform: translateX(0);
+  }
+
+  .roadmap header span{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 50%);
+  }
+  .cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    transform-style: preserve-3d;
+    transform: translateX(-400px);
+    opacity: 0;
+    transition: all 1s;
+  }
+  .cards.show{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .card{
+    position: relative;
+    display: inline-block;
+    width: 25vw;
+    height: 60vh;
+    margin: 10px;
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112,.07);
+    transform-style: preserve-3d;
+  }
+  .card>div{
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .card div h4{
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .card div p{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .card-front h4{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+  }
+  .c1 h4{
+    color: #4472CA;
+  }
+  .c2 h4{
+    color: #ffb000;
+  }
+  .c3 h4{
+    color: #FF6B6B;
+  }
+  .card-front{
+    transform: rotateY(0deg);
+    transition: transform 700ms 400ms ease-out; 
+  }
+  .card:hover .card-front{
+    transform: rotateY(180deg);
+    transition: transform 700ms 400ms ease-out; 
+  }
+  .card-back{
+    transform: rotateY(-180deg);
+    transition: transform 700ms 400ms ease-out; 
+  }
+  .card:hover .card-back{
+    transform: rotate(0deg);
+    transition: transform 700ms 400ms ease-out; 
+  }
+  #back1 p{
+    border-top:3px solid #4473ca7e;
+  }
+  #back2 p{
+    border-top:3px solid #ffe76d98;
+  }
+  #back3 p{
+    border-top:3px solid #ff6b6b85;
+  }
+  .card-back p{
+    word-break: keep-all;
+    width: 22vw;
+    padding-top: 5vh;
+  }
+  .card-back img{
+    padding: 10vh 0 3vh;
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+  }
+  .joinHeader{
+    text-align: center;
+    top: 15%;
+  }
+  .joins{
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: all 1s;
+  }
+  .joins.show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .join header span{
+    font-size: 3rem;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 50%);
+  }
+  .join article{
+    text-align: center;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  .joins form:first-of-type{
+    border-right: 3px solid #FFD0AE;
+  }
+  .join article #enroll, #login{
+    margin: 10px;
+    table-layout: fixed;
+  }
+  #login{
+    margin-top: 18%;
+  }
+  .join form{
+    display: inline-block;
+    text-align: center;
+  }
+  #enroll *, #login *{
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 20vw;
+  }
+  #enroll, #login{
+    width: 40vw;
+  }
+  #enroll th, #login th{
+    width: 15vw;
+    padding: 5px;
+  }
+  #enroll tr td span{
+    font-size: 1.5rem;
+    color: rgb(192, 19, 19);
+  }
+  .join .req{
+    color: rgb(192, 19, 19);
+  }
+  #joinbtn, #loginbtn{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    color: #4472CA;
+    background-color:#FFE66D;
+    border: 3px solid #ffb000;
+    border-radius: 10px;
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112,.07);
+    transform: translateY(0);
+    transition: all .3s;
+    cursor: pointer;
+    margin-top: 5vh;
+  }
+  #joinbtn:hover, #loginbtn:hover{
+    transform: translateY(-5px);
+    color: #f8f2e8;
+    background-color: #ffb000;
+  }
+  footer{
+    text-align: center;
+    font-size: 1.5rem;
+    display: block;
+    background-color: #FFD0AE;
+    bottom: 3%;
+  }

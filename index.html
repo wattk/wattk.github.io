@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyejin's Homepage</title>
+  <link rel="shortcut icon" href="img/orange.ico">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <header id="header">
+    <nav>
+      <ul>
+        <li class="menu">
+          <a href="#about">Who I Am</a>
+        </li>
+        <li class="menu">
+          <a href="#like">What I Like</a>
+        </li>
+        <li class="menu">
+          <a href="#project">My Project</a>
+        </li>
+        <li class="menu">
+          <a href="#roadmap">My Roadmap</a>
+        </li>
+        <li>
+          <a href="#join">Join</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="landing" id="landing">
+    <div id="key_val">
+      <!-- 텍스트 입력 -->
+      <svg width=715 height=120 viewBox="0 0 715 120">
+        <text x="0" y="60%">H</text>
+        <text x="75" y="60%">E</text>
+        <text x="137" y="60%">L</text>
+        <text x="198" y="60%">L</text>
+        <text x="258" y="60%">O</text>
+        <text x="350" y="60%">W</text>
+        <text x="437" y="60%">O</text>
+        <text x="510" y="60%">R</text>
+        <text x="583" y="60%">L</text>
+        <text x="644" y="60%">D</text>
+        <text x="210" y="90%">This is Hyejin's Website:)</text>
+      </svg>
+      <!-- 아래로 이동하는 버튼 -->
+      <a href="#about" id="startBtn"><button>WANNA SEE?</button></a>
+    </div>
+    <div class="particles" id="particles"></div>
+  </section>
+
+  <div class="wrap">
+    <section class="about page" id="about">
+      <!-- 자기소개 페이지 -->
+      <!-- 중간중간 글자나 이모티콘을 클릭하면 alert뜨면서 호기심이 많으시군요! 같은 문구 띄움 재밋을듯 -->
+      <article>
+        <div class="info" id="info">
+          <span>1994.09.30</span>
+          <br>
+          <span>watt.kwon@gmail.com</span>
+        </div>
+        <div class="intro" id="intro">
+          <span class="bold">안녕하세요</span>
+          <span class="icon" id="greeting">🖐</span>
+          <br>
+          <span class="bold underline">권혜진</span><span>입니다</span>
+          <br>
+          <span>클린 코드를 위해</span>
+          <br>
+          <span>꾸준히 </span>
+          <span class="bold">고민</span><span>하고 </span>
+          <span class="bold">기록</span><span>합니다</span><span class="icon" id="write">✍</span>
+          <br>
+          <a href="https://www.notion.so/Learning-Logs-8fc57df04f444266aae87c2138721e27" target="blank">
+            <span class="bold underline">구경</span><span>해보실래요?</span>
+            <!-- 화살표 이미지? -->
+            <span class="icon" id="gotolink">💌</span>
+          </a>
+        </div>
+      </article>
+    </section>
+    <section class="like page" id="like">
+      <!-- 좋아하는 것 소개 페이지 -->
+      <article>
+        <div class="box likemain" id="likemain">
+          <span>여행이 좋아서</span>
+          <div id="scroller">
+            <ol>
+              <li>일본을</li>
+              <li>베트남을</li>
+              <li>태국을</li>
+              <li>프랑스를</li>
+              <li>영국을</li>
+              <li>스페인을</li>
+              <li>이태리를</li>
+              <li>러시아를</li>
+              <li>독일을</li>
+            </ol>
+          </div>
+          <span class="bold">다녀왔습니다</span>
+          <br>
+          <div id="linkinfo" class="underline">더 자세히 알고 싶다면?</div>
+        </div>
+        <div class="map">
+          <img src="img/travel.gif" alt="여행">
+        </div>
+        
+      </article>
+    </section>
+
+    <section class="myproject page" id="project">
+      <article>
+        <header class="projectHeader">
+          <span class="bold">이런 걸</span><span> 해왔습니다</span><span>👏</span>
+        </header>
+          <section class="projects">
+            <div class="project">
+              <div class="img">
+                <img src="img/vaccine.jpg" alt="백신예약프로그램" class="vaccine">
+              </div>
+              <h5 class="title">백신 예약 프로그램</h5>
+              <div class="info">
+                <span>Team Project</span>
+                <span>2021.07.</span>
+                <!-- <br> -->
+                <span>Java</span>
+              </div>
+            </div>
+            <div class="project">
+              <div class="img">
+                <img src="img/game.jpg" alt="리듬게임" class="game">
+              </div>
+              <h5 class="title">리듬 게임</h5>
+              <div class="info">
+                <span>Personal Project</span>
+                <span>2021.08.</span>
+                <!-- <br> -->
+                <span>Java</span>
+              </div>
+            </div>
+            <div class="project">
+              <div class="img">
+                <img src="img/homepage.png" alt="개인홈페이지" class="homepage">
+              </div>
+              <h5 class="title">개인 홈페이지</h5>
+              <div class="info">
+                <span>Personal Project</span>
+                <span>2021.09.</span>
+                <!-- <br> -->
+                <span>HTML5, CSS3, javascript</span>
+              </div>
+            </div>
+          </section>
+      </article>
+      <div class="modal">
+        <img src="img/cross-button.png" alt="닫기 버튼">
+        <div class="modal-wrap" id="vaccine">
+          <img src="img/vaccine.gif" alt="vaccine">
+          <div class="info">
+            <h4>백신 예약 프로그램</h4>
+            <span>Team Project</span>
+            <span>2021.07</span>
+            <br>
+            <span>Java</span>
+            <p>
+              콘솔 창을 이용해 한 병원의 백신 예약 진행 및 재고 관리를 진행합니다. 관리자 메뉴 파트를 맡아 콘솔에 출력되는 메인부터 IO로부터 예약자 명단 및 백신 재고 리스트를 불러오는 기능을 담당했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="modal-wrap" id="game">
+          <img src="img/game.gif" alt="game">
+          <div class="info">
+            <h4>리듬 게임</h4>
+            <span>Personal Project</span>
+            <span>2021.08</span>
+            <br>
+            <span>Java</span>
+            <p>
+              GUI를 통해 간단하게 진행할 수 있는 리듬게임입니다. 메인 화면부터 곡 선택, 게임 진행까지 플레이 가능하며 나오는 키노트를 박자에 맞춰 입력하는 것에 따라 점수를 매깁니다. exe파일로 만드는 것까지 진행했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="modal-wrap" id="homepage">
+          <img src="img/homepage.gif" alt="homepage">
+          <div class="info">
+            <h4>개인 홈페이지</h4>
+            <span>Personal Project</span>
+            <span>2021.08</span>
+            <br>
+            <span>HTML5, CSS3, javascript</span>
+            <p>
+              원페이지 웹을 기본으로 한 자기소개 페이지입니다. 지금 보고 계십니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap page" id="roadmap">
+      <!-- 개발 로드맵 페이지 -->
+        <!-- 제목 -->
+          <header class="roadmapHeader">
+            <span>이런 걸 할 </span><span class="bold">계획</span><span>입니다</span><span>🙌</span>
+          </header>
+        <section class="cards">
+        <!-- 목표로 하는 것 -->
+        <div class="card">
+          <div class="card-front c1" id="card1">
+            <h4>Technical<br>Experience</h4>
+            <p>
+              network, git, java
+            </p>
+          </div>
+          <div class="card-back c1" id="back1">
+            <img src="img/books.png" alt="책">
+            <p>
+              git, docker와 같은 관리 툴에 대한 공부와 더불어 주력 언어인 Java에 대한 이해도를 높일 계획입니다. 이후에는 다른 언어도 공부하고 싶습니다.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front c2" id="card2">
+            <h4>Computer<br>Science</h4>
+            <p>
+              database, design pattern
+            </p>
+          </div>
+          <div class="card-back c2" id="back2">
+            <img src="img/science.png" alt="cs">
+            <p>
+              서버와 DB가 이어지는 일련의 흐름에 대해 파악하고 데이터를 잘 관리하는 개발자가 되고 싶습니다. 디자인 패턴 공부를 통해 더 빠르고 좋은 결과물을 도출하는 사람이 될 계획입니다.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front c3" id="card3">
+            <h4>Algorithm<br>Study</h4>
+            <p>
+              stack, queue, hash, quick
+            </p>
+          </div>
+          <div class="card-back c3" id="back3">
+            <img src="img/algorithm.png" alt="알고리즘">
+            <p>
+              꾸준한 알고리즘 공부를 통해 알고리즘적 사고를 하는 개발자가 되고 싶습니다. 다양한 알고리즘을 직접 구현하고 실행해보면서 이해도를 높여갈 예정입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="join page" id="join">
+      <!-- 회원가입 페이지 -->
+      <header class="joinHeader joins">
+        <!-- 제목 -->
+        <span>더 궁금한 게 있으시다면</span>
+      </header>
+      <article class="joins">
+        <!-- 회원가입 폼 -->
+        <form name="loginform" action="javascript:login();">
+          <table id="login">
+            <tr>
+              <th>아이디</th>
+              <td>
+                <input type="text" name="loginId" id="loginId">
+              </td>
+            </tr>
+            <tr>
+              <th>비밀번호</th>
+              <td>
+                <input type="password" name="loginPwd" id="loginPwd">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"class="btn">
+                  <input id="loginbtn" type="submit" value="LOGIN">
+              </td>
+          </tr>
+          </table>
+        </form>
+        <form name="memberFrm" action="javascript:join();">
+          <table id="enroll">
+              <tr>
+                  <th>아이디<span class="req">*</span></th>
+                  <td>
+                      <input type="text" name="userId" id="userId" >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>비밀번호<span class="req">*</span></th>
+                    <td>
+                      <input type="password" name="pwd" id="pwd" >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>비밀번호확인</th>
+                    <td>
+                      <input type="password" id="pwdCheck">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>이름<span class="req">*</span></th>
+                    <td>
+                      <input type="text" name="userName" id="userName" > 
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>이메일<span class="req">*</span></th>
+                    <td>
+                      <input type="email" name="email" id="email" >
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="btn">
+                      <input id="joinbtn"type="submit" value="JOIN">
+                  </td>
+              </tr>
+          </table>
+      </form>
+      </article>
+    </section>
+
+    <footer>
+      <!-- 저작권 표시 -->
+      <p>copyright ⓒ Hyejin Kwon. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
